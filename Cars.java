@@ -28,7 +28,7 @@ abstract class Cars {
     }
 
     public void setColor(Color clr){
-	    color = clr;
+	    color = clr;kuhdossdhasgldgljad
     }
 
     public Color getColor(){
