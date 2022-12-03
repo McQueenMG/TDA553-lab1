@@ -36,7 +36,7 @@ abstract class Car implements Movable {
         return currentSpeed;
     }
 
-    public void setCurrentSpeed(double currentSpeed) {
+    private void setCurrentSpeed(double currentSpeed) {
         if (currentSpeed <= enginePower && currentSpeed >= 0) {
             this.currentSpeed = currentSpeed;
         } else {
@@ -44,7 +44,7 @@ abstract class Car implements Movable {
         }
     }
 
-    public void decrementSpeed(double amount) {
+    private void decrementSpeed(double amount) {
         double speedChange = calculateSpeed(amount);
         if (amount >= 0 && getCurrentSpeed() - speedChange <= enginePower) {
             setCurrentSpeed(getCurrentSpeed() - speedChange);
@@ -53,7 +53,7 @@ abstract class Car implements Movable {
         }
     }
 
-    public void incrementSpeed(double amount) {
+    private void incrementSpeed(double amount) {
         double speedChange = calculateSpeed(amount);
         if (amount >= 0 && getCurrentSpeed() + speedChange <= enginePower) {
             setCurrentSpeed(getCurrentSpeed() + speedChange);
