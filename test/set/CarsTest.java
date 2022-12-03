@@ -84,84 +84,84 @@ public class CarsTest { // Done!
         assertEquals(Color.blue, volvo.getColor());
     }
     // OBS! The following methods needs to be public to run these tests!
-    // @Test
-    // public void test_setCurrentSpeed(){
-    // Volvo240 volvo = new Volvo240();
-    // volvo.setCurrentSpeed(1);
-    // assertEquals(1, volvo.getCurrentSpeed(), 0);
-    // }
-    // @Test
-    // public void test_if_setCurrentSpeed_throws_IllegalArgumentException(){
-    // assertThrows(IllegalArgumentException.class, new Executable() {
+    @Test
+    public void test_setCurrentSpeed(){
+    Volvo240 volvo = new Volvo240();
+    volvo.setCurrentSpeed(1);
+    assertEquals(1, volvo.getCurrentSpeed(), 0);
+    }
+    @Test
+    public void test_if_setCurrentSpeed_throws_IllegalArgumentException(){
+    assertThrows(IllegalArgumentException.class, new Executable() {
 
-    // @Override
-    // public void execute() throws Throwable {
-    // Volvo240 volvo = new Volvo240();
-    // volvo.setCurrentSpeed(1000);
-    // }
-    // });
-    // }
+    @Override
+    public void execute() throws Throwable {
+    Volvo240 volvo = new Volvo240();
+    volvo.setCurrentSpeed(1000);
+    }
+    });
+    }
 
-    // @Test
-    // public void test_incrementspeed(){
-    // Saab95 saab = new Saab95();
-    // saab.incrementSpeed(1);
-    // assertEquals(1.25, saab.getCurrentSpeed(), 0);
-    // }
-    // @Test
-    // public void test_if_incrementspeed_throws_exception(){
+    @Test
+    public void test_incrementspeed(){
+    Saab95 saab = new Saab95();
+    saab.incrementSpeed(1);
+    assertEquals(1.25, saab.getCurrentSpeed(), 0);
+    }
+    @Test
+    public void test_if_incrementspeed_throws_exception(){
 
-    // assertThrows(IllegalArgumentException.class, new Executable() {
+    assertThrows(IllegalArgumentException.class, new Executable() {
 
-    // @Override
-    // public void execute() throws Throwable {
-    // Volvo240 volvo = new Volvo240();
-    // volvo.incrementSpeed(-1);
-    // }
-    // });
-    // }
-    // @Test
-    // public void test_decrementspeed(){
-    // Saab95 saab = new Saab95();
-    // saab.incrementSpeed(1);
-    // saab.decrementSpeed(1);
-    // assertEquals(0, saab.getCurrentSpeed(), 0);
-    // }
-    // @Test
-    // public void test_if_decrementspeed_throws_exception() {
+    @Override
+    public void execute() throws Throwable {
+    Volvo240 volvo = new Volvo240();
+    volvo.incrementSpeed(-1);
+    }
+    });
+    }
+    @Test
+    public void test_decrementspeed(){
+    Saab95 saab = new Saab95();
+    saab.incrementSpeed(1);
+    saab.decrementSpeed(1);
+    assertEquals(0, saab.getCurrentSpeed(), 0);
+    }
+    @Test
+    public void test_if_decrementspeed_throws_exception() {
 
-    // assertThrows(IllegalArgumentException.class, new Executable() {
+    assertThrows(IllegalArgumentException.class, new Executable() {
 
-    // @Override
-    // public void execute() throws Throwable {
-    // Volvo240 volvo = new Volvo240();
-    // volvo.decrementSpeed(-1);
-    // }
-    // });
-    // }
-    // @Test
-    // public void test_startEngine(){
+    @Override
+    public void execute() throws Throwable {
+    Volvo240 volvo = new Volvo240();
+    volvo.decrementSpeed(-1);
+    }
+    });
+    }
+    @Test
+    public void test_startEngine(){
 
-    // Volvo240 volvo = new Volvo240();
-    // volvo.incrementSpeed(1);
-    // volvo.startEngine();
-    // assertEquals(0.1, volvo.getCurrentSpeed(), 0);
-    // }
-    // @Test
-    // public void test_stopEngine(){
+    Volvo240 volvo = new Volvo240();
+    volvo.incrementSpeed(1);
+    volvo.startEngine();
+    assertEquals(0.1, volvo.getCurrentSpeed(), 0);
+    }
+    @Test
+    public void test_stopEngine(){
 
-    // Volvo240 volvo = new Volvo240();
-    // volvo.incrementSpeed(1);
-    // volvo.stopEngine();
-    // assertEquals(0, volvo.getCurrentSpeed(), 0);
-    // }
-    // @Test
-    // public void test_move_method(){
-    // Volvo240 volvo = new Volvo240();
-    // volvo.incrementSpeed(1);
-    // volvo.move();
-    // assertTrue(volvo.getX() == 1.25);
-    // }
+    Volvo240 volvo = new Volvo240();
+    volvo.incrementSpeed(1);
+    volvo.stopEngine();
+    assertEquals(0, volvo.getCurrentSpeed(), 0);
+    }
+    @Test
+    public void test_move_method(){
+    Volvo240 volvo = new Volvo240();
+    volvo.incrementSpeed(1);
+    volvo.move();
+    assertTrue(volvo.getX() == 1.25);
+    }
     @Test
     public void test_gas() {
         Volvo240 volvo = new Volvo240();

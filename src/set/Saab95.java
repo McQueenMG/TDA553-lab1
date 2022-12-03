@@ -27,11 +27,7 @@ public class Saab95 extends Car {
         return getEnginePower() * 0.01 * turbo;
     }
 
-    double calculateSpeedDecrease(double amount) {
-        return getCurrentSpeed() - speedFactor() * amount;
-    }
-
-    double calculateSpeedIncrease(double amount) {
-        return getCurrentSpeed() + speedFactor() * amount;
+    double calculateSpeed(double amount) {
+        return speedFactor() * amount;
     }
 }

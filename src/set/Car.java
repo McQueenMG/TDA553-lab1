@@ -36,7 +36,7 @@ abstract class Car implements Movable {
         return currentSpeed;
     }
 
-    private void setCurrentSpeed(double currentSpeed) {
+    public void setCurrentSpeed(double currentSpeed) {
         if (currentSpeed <= enginePower && currentSpeed >= 0) {
             this.currentSpeed = currentSpeed;
         } else {
@@ -44,19 +44,19 @@ abstract class Car implements Movable {
         }
     }
 
-    private void decrementSpeed(double amount) {
-        double newSpeed = calculateSpeedDecrease(amount);
-        if (amount >= 0 && newSpeed <= enginePower) {
-            setCurrentSpeed(newSpeed);
+    public void decrementSpeed(double amount) {
+        double speedChange = calculateSpeed(amount);
+        if (amount >= 0 && getCurrentSpeed() - speedChange <= enginePower) {
+            setCurrentSpeed(getCurrentSpeed() - speedChange);
         } else {
             throw new IllegalArgumentException("Can not decrease the speed any further");
         }
     }
 
-    private void incrementSpeed(double amount) {
-        double newSpeed = calculateSpeedIncrease(amount);
-        if (amount >= 0 && newSpeed <= enginePower) {
-            setCurrentSpeed(newSpeed);
+    public void incrementSpeed(double amount) {
+        double speedChange = calculateSpeed(amount);
+        if (amount >= 0 && getCurrentSpeed() + speedChange <= enginePower) {
+            setCurrentSpeed(getCurrentSpeed() + speedChange);
         } else {
             throw new IllegalArgumentException("Can not increase the speed any further due to enginepower");
         }
@@ -78,9 +78,8 @@ abstract class Car implements Movable {
         }
     }
 
-    abstract double calculateSpeedDecrease(double amount);
+    abstract double calculateSpeed(double amount);
 
-    abstract double calculateSpeedIncrease(double amount);
 
     public double getX() {
         return x;
