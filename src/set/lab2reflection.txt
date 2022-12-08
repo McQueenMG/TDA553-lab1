@@ -1,0 +1,16 @@
+1.  Gas metoden incrementar hastigheten som maximalt kan uppnå enginepower. Detta görs i steg med en faktor och ett 
+    argument som måste vara inom intervallet [0, 1]. Brake metoden decrementerar hastigheten som minimalt kan uppnå 0. 
+    Detta görs i steg med en faktor och ett argument som måste vara inom intervallet [0, 1].
+
+    Ja både Volvo och Scania implementerar samma. 
+
+    Ja, designen följer LPS eftersom alla våra subklasser har superklassernas egenskaper eller mer. 
+
+2.  Vi gjorde en klass CarStorage som både CarTransport och CarRepairShop delegerar till. 
+
+    Vi valde att använda delegering eftersom CarTransport och CarRepairShop har olika superklasser,
+    därmed kunde vi inte implementera gemensam kod i någon superklass. 
+
+3.  Nej vi behövde inte ändra något i koden från labb 1. Alltså följde vi Open-Closed Principle bra. 
+    SideNote: Vi lade till TrimCar och TurboCar men det var inget som var nödvändigt för labb 2 utan något
+    som rekomenderades till oss. 

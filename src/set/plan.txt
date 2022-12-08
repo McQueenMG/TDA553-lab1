@@ -1,0 +1,13 @@
+Change the name of the superclass Cars to vehicles implements movable
+
+put Saab95 as a subclass of Cars
+put Volvo240 as a subclass of Cars
+
+create a subclass of Car called Trucks
+put scania as a subclass of trucks
+put car transporter as a subclass of trucks
+
+3) OBS! uncertain
+create seperate superclass called Car workshops
+create subclass car repair shop 
+
