@@ -20,11 +20,6 @@ public class CarTest { // Done!
         assertTrue(saab instanceof Car);
     }
 
-    @Test
-    public void test_getNrDoors() {
-        Volvo240 volvo = new Volvo240();
-        assertEquals(4, volvo.getNrDoors());
-    }
 
     @Test
     public void test_getEnginePower() {
@@ -33,48 +28,6 @@ public class CarTest { // Done!
 
     }
 
-    @Test
-    public void test_getX() {
-        Volvo240 volvo = new Volvo240();
-        volvo.gas(0.1); // Since 0 is the standardvalue of an int I want to change the value of x first.
-        volvo.move();
-        assertEquals(0.125, volvo.getX(), 0);
-    }
-
-    @Test
-    public void test_getY() {
-        Volvo240 volvo = new Volvo240();
-        volvo.turnLeft();
-        volvo.gas(0.1); // Since 0 is the standardvalue of an int I want to change the value of y first.
-        volvo.move();
-        assertEquals(0.125, volvo.getY(), 0);
-    }
-
-    @Test
-    public void test_getModelName() {
-        Volvo240 volvo = new Volvo240();
-        assertEquals("Volvo240", volvo.getModelName());
-    }
-
-    @Test
-    public void test_getDirection_and_setDirection() {
-        Volvo240 volvo = new Volvo240();
-        volvo.setDirection(45);
-        assertEquals(45, volvo.getDirection(), 0);
-    }
-
-    @Test
-    public void test_getColor() {
-        Volvo240 volvo = new Volvo240();
-        assertEquals(Color.black, volvo.getColor());
-    }
-
-    @Test
-    public void test_setColor() {
-        Volvo240 volvo = new Volvo240();
-        volvo.setColor(Color.blue);
-        assertEquals(Color.blue, volvo.getColor());
-    }
     @Test
     public void test_gas() {
         Volvo240 volvo = new Volvo240();

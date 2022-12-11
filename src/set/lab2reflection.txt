@@ -1,6 +1,5 @@
-1.  Gas metoden incrementar hastigheten som maximalt kan uppnå enginepower. Detta görs i steg med en faktor och ett 
-    argument som måste vara inom intervallet [0, 1]. Brake metoden decrementerar hastigheten som minimalt kan uppnå 0. 
-    Detta görs i steg med en faktor och ett argument som måste vara inom intervallet [0, 1].
+1.  Gas metoden incrementar hastigheten då vi får in en double inom intervallet [0, 1]. Brake metoden decrementerar hastigheten då vi får
+    in en double inom intervallet [0, 1].
 
     Ja både Volvo och Scania implementerar samma. 
 

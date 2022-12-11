@@ -14,7 +14,7 @@ public class CarTransportTest{
     public void test_change_platform() {
         CarTransport carTransport = new CarTransport();
         carTransport.changePlatform();
-        assertEquals(-45, carTransport.getPlatformAngle(), 0); 
+        assertEquals(false, carTransport.getRampRaised()); 
     }
     
     @Test
