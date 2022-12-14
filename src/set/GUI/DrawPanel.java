@@ -1,4 +1,4 @@
-package set.GUI.*;
+package set.GUI;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
