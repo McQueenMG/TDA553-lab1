@@ -2,7 +2,7 @@ package set.model;
 
 import java.awt.*;
 
-abstract class Car implements Movable {
+public abstract class Car implements Movable {
 
     private int nrDoors;
     private double enginePower;
@@ -14,7 +14,7 @@ abstract class Car implements Movable {
     private double y;
     private boolean carInStorage = false;
 
-    protected Car(int nrDoors, double enginePower, String modelName, Color color, double currentSpeed) {
+    public Car(int nrDoors, double enginePower, String modelName, Color color, double currentSpeed) {
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
         this.modelName = modelName;
