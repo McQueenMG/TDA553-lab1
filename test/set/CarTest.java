@@ -9,6 +9,10 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.jupiter.api.function.Executable;
 
+import set.model.*;
+import set.model.Saab95;
+import set.model.Volvo240;
+
 public class CarTest { // Done!
 
     @Test

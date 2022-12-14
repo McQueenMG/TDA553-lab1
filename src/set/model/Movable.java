@@ -1,4 +1,4 @@
-package set;
+package set.model;
 
 interface Movable {
 

@@ -3,6 +3,9 @@ package set;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
+import set.model.*;
+import set.model.Volvo240;
+
 public class Volvo240Test {// Done!
 
     @Test

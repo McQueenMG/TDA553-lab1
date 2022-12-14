@@ -7,6 +7,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.jupiter.api.function.Executable;
 
+import set.model.Scania;
+
 public class ScaniaTest {
 
 

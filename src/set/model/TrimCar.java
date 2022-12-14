@@ -1,4 +1,4 @@
-package set;
+package set.model;
 import java.awt.*;
 
 abstract class TrimCar extends Car{

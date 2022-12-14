@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.Test;
 import org.junit.jupiter.api.function.Executable;
 
+import set.model.Scania;
+
 public class TrckTest {
 
     @Test

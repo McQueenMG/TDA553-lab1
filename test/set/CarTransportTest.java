@@ -8,6 +8,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 import org.junit.jupiter.api.function.Executable;
 
+import set.model.CarTransport;
+import set.model.Volvo240;
+
 public class CarTransportTest{
     
     @Test
