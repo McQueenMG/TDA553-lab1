@@ -1,28 +1,38 @@
 package set.GUI;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import set.model.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModelAdapter {
 
     List<Car> cars = new ArrayList<>();
-    List<Observer> observers = new ArrayList<>();
+    
+    private final int delay = 50;
+    private Timer timer = new Timer(delay, new TimerListener());
+    public CarView frame;
 
-    public ModelAdapter() {
 
+    private class TimerListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            for (Car car : cars) {
+                car.move();
+                frame.update(car);
+            }
+        }
     }
 
     public void addCar(Car car) {
         cars.add(car);
     }
 
-    public void addObserver(Observer observer) {
-        observers.add(observer);
-    }
 
-    public List<Car> getCars() {
+
+    public List<Car> getCarsList() {
         return cars;
     }
 
@@ -41,8 +51,8 @@ public class ModelAdapter {
         }
     }
 
-    public void update() {
-
+    public void startTimer() {
+        timer.start();
     }
 
 }

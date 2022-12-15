@@ -10,6 +10,7 @@ public class Scania extends Truck{
         super(2, 100, "Scania", Color.black, 0);
         this.platformAngle = 0;
         stopEngine();
+        setY(100);  
     }
     public double getPlatformAngle(){
         return platformAngle;

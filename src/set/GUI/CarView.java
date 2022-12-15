@@ -3,6 +3,7 @@ package set.GUI;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import set.model.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,15 +16,14 @@ import java.awt.event.ActionListener;
  * TODO: Write more actionListeners and wire the rest of the buttons
  **/
 
-public class CarView extends JFrame implements Observer{
+public class CarView extends JFrame{
     private static final int X = 800;
     private static final int Y = 800;
 
     // The controller member
     CarController carC;
 
-    DrawPanel drawPanel = new DrawPanel(X, Y-240);
-
+    DrawPanel drawPanel;
     JPanel controlPanel = new JPanel();
 
     JPanel gasPanel = new JPanel();
@@ -41,11 +41,10 @@ public class CarView extends JFrame implements Observer{
     JButton startButton = new JButton("Start all cars");
     JButton stopButton = new JButton("Stop all cars");
 
-    GasController gasController;
-
     // Constructor
     public CarView(String framename, CarController cc){
         this.carC = cc;
+        drawPanel  = new DrawPanel(X, Y-240, carC.getCarsList());
         initComponents(framename);
     }
 
@@ -129,5 +128,12 @@ public class CarView extends JFrame implements Observer{
         this.setVisible(true);
         // Make sure the frame exits when "x" is pressed
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    public void update(Car car){
+        int x = (int) Math.round(car.getX());
+        int y = (int) Math.round(car.getY());
+        drawPanel.moveit(x, y, carC.getCarsList().indexOf(car));
+        // repaint() calls the paintComponent method of the panel
+        drawPanel.repaint();
     }
 }
