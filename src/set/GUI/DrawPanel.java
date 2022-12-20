@@ -18,14 +18,7 @@ import set.model.Car;
 public class DrawPanel extends JPanel{
 
     // Just a single image, TODO: Generalize
-    BufferedImage volvoImage;
-    BufferedImage scaniaImage;
-    BufferedImage saabImage;
-
     // To keep track of a singel cars position
-    Point volvoPoint = new Point();
-    Point scaniaPoint = new Point();
-    Point saabPoint = new Point();
 
     private List<Point> carPoints = new ArrayList<>();
     private List<BufferedImage> carImages = new ArrayList<>();
